@@ -7,18 +7,21 @@ public class Movement : MonoBehaviour
 {
 
    
-
+    // ЧТО МОЖЕТ ПОЙТИ НЕ ТАК????
 
 
     void FixedUpdate()
     {
-    
 
 
-       
-        
+        /*
+        if (Input.GetKeyDown(H))
+        {
             Jump();
+        }
         
+            
+        */
         
        
     }
