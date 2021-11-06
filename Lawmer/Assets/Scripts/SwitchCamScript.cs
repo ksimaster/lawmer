@@ -8,18 +8,6 @@ public class SwitchCamScript : MonoBehaviour
     public GameObject[] points = new GameObject[4];
     private int i = 1;
 
-    public void SwitchCamera_2()
-    {
-        cam1.transform.position = new Vector3(11.9f, 23.9f, 5.4f);
-        cam1.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);       
-    }
-
-    public void SwitchCamera_1()
-    {
-        cam1.transform.position = new Vector3(0f, 23.1f, 118.1f);
-        cam1.transform.rotation = new Quaternion(0f, Mathf.PI, 0f, 0f);
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
@@ -34,9 +22,21 @@ public class SwitchCamScript : MonoBehaviour
     public void PointCamera(GameObject point)
     {
 
-        cam1.transform.position = point.transform.position; //new Vector3(point, 23.1f, 118.1f);
+        cam1.transform.position = point.transform.position; //new Vector3(0, 23.1f, 118.1f);
         cam1.transform.rotation = point.transform.rotation; //new Quaternion(0f, Mathf.PI, 0f, 0f);
     }
 
+    /*
+    public void SwitchCamera_2()
+    {
+        cam1.transform.position = new Vector3(11.9f, 23.9f, 5.4f);
+        cam1.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+    }
 
+    public void SwitchCamera_1()
+    {
+        cam1.transform.position = new Vector3(0f, 23.1f, 118.1f);
+        cam1.transform.rotation = new Quaternion(0f, Mathf.PI, 0f, 0f);
+    }
+    */
 }

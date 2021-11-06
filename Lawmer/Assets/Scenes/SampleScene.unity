@@ -1009,7 +1009,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1950730038}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchCamScript, Assembly-CSharp
         m_MethodName: SwitchCamera_1
         m_Mode: 1
@@ -1059,26 +1059,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1063367786}
   m_CullTransparentMesh: 1
---- !u!1 &1140240991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3768393946619812799, guid: 42de65772796dac4d86634ab42727890,
-    type: 3}
-  m_PrefabInstance: {fileID: 3768393947026188289}
-  m_PrefabAsset: {fileID: 0}
---- !u!136 &1140240992
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1140240991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 10
-  m_Height: 100
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1183353213
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1282,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1950730038}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SwitchCamScript, Assembly-CSharp
         m_MethodName: SwitchCamera_2
         m_Mode: 1
@@ -1364,7 +1344,6 @@ GameObject:
   - component: {fileID: 1950730036}
   - component: {fileID: 1950730035}
   - component: {fileID: 1950730034}
-  - component: {fileID: 1950730038}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1449,23 +1428,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1950730038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1950730033}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9d241f437aa6c4091fad58c8bb841b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam1: {fileID: 963194227}
-  points:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &2116151674
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,6 +1514,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1140240997, guid: 42de65772796dac4d86634ab42727890, type: 3}
+      propertyPath: speedMove
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140240998, guid: 42de65772796dac4d86634ab42727890, type: 3}
+      propertyPath: m_Height
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140240998, guid: 42de65772796dac4d86634ab42727890, type: 3}
+      propertyPath: m_Radius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1140240998, guid: 42de65772796dac4d86634ab42727890, type: 3}
+      propertyPath: m_Center.y
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3768393946619812799, guid: 42de65772796dac4d86634ab42727890,
         type: 3}
       propertyPath: m_Name
@@ -1570,7 +1548,7 @@ PrefabInstance:
     - target: {fileID: 3768393946620102559, guid: 42de65772796dac4d86634ab42727890,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.0790043
+      value: 18.2
       objectReference: {fileID: 0}
     - target: {fileID: 3768393946620102559, guid: 42de65772796dac4d86634ab42727890,
         type: 3}
@@ -1610,11 +1588,6 @@ PrefabInstance:
     - target: {fileID: 3768393946620102559, guid: 42de65772796dac4d86634ab42727890,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7169021013089677416, guid: 42de65772796dac4d86634ab42727890,
-        type: 3}
-      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
