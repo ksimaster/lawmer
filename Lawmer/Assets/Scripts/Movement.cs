@@ -30,15 +30,15 @@ public class Movement : MonoBehaviour
     // метод перемещения персонажа
     private void CharacterMove()
     {
-        if (ch_controller.isGrounded)
-        {
+      //  if (ch_controller.isGrounded)
+        //{
             //перемещение по поверхности
             moveVector = Vector3.zero;
             moveVector.x = Input.GetAxis("Horizontal") * speedMove;
             moveVector.z = Input.GetAxis("Vertical") * speedMove;
            // Debug.Log(moveVector.x);
            // Debug.Log(moveVector.z);
-            /*
+            
             //анимация персонажа
             if (moveVector.x != 0 || moveVector.z != 0)
             {
@@ -47,7 +47,7 @@ public class Movement : MonoBehaviour
             else {
                 ch_animator.SetBool("Move", false); 
             }
-           */
+           
             //поворот персонажа
             if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
             {
@@ -55,28 +55,38 @@ public class Movement : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(direct);
             }
 
-        }
+       // }
 
-        moveVector.y = gravityForce; // расчет гравитции, выполнять после поворота!!!
+        moveVector.y = gravityForce; // расчет гравитации, выполнять после поворота!!!
         ch_controller.Move(moveVector * Time.deltaTime); //метод передвижения по направлениям
     }
     
     //метод гравитации
     private void GamingGravity()
     {
-        if (!ch_controller.isGrounded) gravityForce -= 40f * Time.deltaTime;
+        if (!ch_controller.isGrounded)
+        {
+            gravityForce -= 100f * Time.deltaTime;
+
+           // ch_animator.SetBool("Jump", false);
+        }
         else gravityForce = -1f;
-        if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded) gravityForce = jumpPower;
+        if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
+        {
+            gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
+            
+            
+            
+            //ch_animator.SetBool("Jump", true);
+            
+            // gravityForce = jumpPower;
+            //  ch_animator.SetTrigger("Jump");
+           
+         //   ch_animator.SetBool("Jump", false);
+        }
     }
 
 
 
-
-
-
-    private void Jump() 
-    {
-
-    }
 
 }
