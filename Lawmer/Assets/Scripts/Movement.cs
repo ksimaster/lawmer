@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
     private CharacterController ch_controller;
     private Animator ch_animator;
 
+   
+
     private void Start()
     {
         ch_controller = GetComponent<CharacterController>();
@@ -73,7 +75,13 @@ public class Movement : MonoBehaviour
         else gravityForce = -1f;
         if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded)
         {
-            gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
+
+
+           
+            
+            
+            
+            // gameObject.GetComponent<Rigidbody>().AddForce(0, 3000,0);
             
             
             
@@ -86,7 +94,10 @@ public class Movement : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerEnter(Collider other)
+    {
+        
+    }
 
 
 }
