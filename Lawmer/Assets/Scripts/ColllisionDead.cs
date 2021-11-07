@@ -6,6 +6,7 @@ public class ColllisionDead : MonoBehaviour
 {
     public string collisionTag;
     private Animator monsterAnimator;
+    public static bool buttonCount = false; // ענטדדונ גûחמגא םמגמדמ ןמסכו סלונעט
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class ColllisionDead : MonoBehaviour
 
     public void DestroyObject()
     {
+        buttonCount = true;
         Destroy(gameObject);
     }
 }
