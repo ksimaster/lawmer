@@ -4,4 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/VideoScene.unity
+    guid: f3f68b100577f8641a820152c3438be5
+  - enabled: 1
+    path: Assets/Import/RPG_FPS_game_assets_industrial/Map_v1.unity
+    guid: 5a463281e6e238742a45430f11e82829
+  m_configObjects: {}
