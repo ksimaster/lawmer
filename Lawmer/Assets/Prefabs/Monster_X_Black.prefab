@@ -619,6 +619,7 @@ GameObject:
   - component: {fileID: 2802465520558234047}
   - component: {fileID: 3720515316704082714}
   - component: {fileID: 7869993802912469778}
+  - component: {fileID: 1854359593}
   m_Layer: 0
   m_Name: Monster_X_Black
   m_TagString: Player
@@ -739,6 +740,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collisionTag: Acid
+--- !u!114 &1854359593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5412870524723532067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6991d59cb5bdae240999328f53fadbab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionTagFinish: Finish
+  PanelFinish: {fileID: 0}
 --- !u!1 &5412870524723532129
 GameObject:
   m_ObjectHideFlags: 0
